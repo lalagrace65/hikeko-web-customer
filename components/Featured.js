@@ -22,7 +22,7 @@ const ColumnsWrapper = styled.div`
     grid-template-columns: .9fr 1.1fr;
     gap: 40px;
     img{
-        max-width:100%;
+        max-width:400px;
     }
 `;
 const Column = styled.div`

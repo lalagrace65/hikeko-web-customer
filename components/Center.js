@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const StyledDiv = styled.header`
-    max-width: 800px;
+const StyledDiv = styled.div`
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
 `;

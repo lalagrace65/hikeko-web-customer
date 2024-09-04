@@ -32,7 +32,7 @@ export default function Header(){
                     <Logo href={'/'}>HikeKo</Logo>
                     <StyledNav>
                         <NavLink href={'/'}>Home</NavLink>
-                        <NavLink href={'/'}>All Products</NavLink>
+                        <NavLink href={'/trails-header/allTrails'}>Trails</NavLink>
                         <NavLink href={'/'}>Categories</NavLink>
                         <NavLink href={'/'}><MdOutlineAccountCircle />Account</NavLink>
                         <NavLink href={'/'}>Book</NavLink>

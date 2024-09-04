@@ -1,7 +1,6 @@
 import { model, Schema, models } from "mongoose";
 
-const FeatureSchema = new Schema({
-    
+const FeatureSchema = new Schema({  
     titleText_1:{type: String},
     description_1:{type: String},
     bannerImage_1:[{type:String}],

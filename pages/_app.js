@@ -1,27 +1,26 @@
 import { createGlobalStyle } from "styled-components";
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import { GoogleMapsProvider } from '@/context/GoogleMapsContext';
+import { UserLocationContext } from "@/context/UserLocationContext";
+import { useState } from 'react';
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
   body{
+    background-color: #eee;
     padding:0;
     margin:0;
     font-family: "Rubik", sans-serif;
   }
 `;
-// Extend Chakra UI theme if needed
-const theme = extendTheme({
-  // Add custom Chakra UI theme settings here
-});
 
 export default function App({ Component, pageProps }) {
+  const [userLocation, setUserLocation] = useState(null);
+
   return (
-    <ChakraProvider theme={theme}>
-      <GoogleMapsProvider>
+    <>
+      <UserLocationContext.Provider value={{ userLocation, setUserLocation }}>
         <GlobalStyles/>
         <Component {...pageProps} />
-      </GoogleMapsProvider>
-    </ChakraProvider>
+      </UserLocationContext.Provider>
+    </>
   );
 }
