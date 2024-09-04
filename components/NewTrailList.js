@@ -14,8 +14,7 @@ export default function NewTrailList({ trails }) {
     <Center>
         <TrailsGrid>
             {trails?.length > 0 && trails.map((trail) => (
-                <TrailBox {...trail}>
-                </TrailBox>
+             <TrailBox key={trail.id} {...trail} />
             ))}
         </TrailsGrid>
     </Center>
